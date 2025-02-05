@@ -1,15 +1,33 @@
-function adicionar(){
-let idade = document.getElementById('idade').value;
-let nome = document.getElementById('nome').value;
-let cidade = document.getElementById('cidade').value;
-alert(idade + nome + cidade );
-let total = document.getElementById('valor-total');
-total.textContent= 'Outro';
+let valorFinal=0;
+let valorDigitado = document.getElementById('valor');
+let totalHTML = document.getElementById('valor-total');
+
+function adicao(){
+    valorFinal = valorFinal+parseInt(valorDigitado.value);
+    totalHTML.innerHTML = valorFinal;
+    valorDigitado.value ='';
 };
 
-function limpar(){
-document.getElementById('idade').value = 0;
-document.getElementById('nome').value = '';
-document.getElementById('cidade').value = '';
-totalCarrinho=0;
+function subtracao(){
+    valorFinal = valorFinal-parseInt(valorDigitado.value);
+    totalHTMLinnerHTML = valorFinal;
+    valorDigitado.value ='';
+    };
+
+function multiplicacao(){
+    valorFinal = valorFinal*parseInt(valorDigitado.value);
+    totalHTML.innerHTML = valorFinal;
+    valorDigitado.value ='';
+};
+
+function divisao(){
+    valorFinal = valorFinal/parseInt(valorDigitado.value);
+    totalHTML.innerHTML = valorFinal;
+    valorDigitado.value ='';
+};
+
+function zerar(){
+    valorFinal=0;
+    valorDigitado.value ='';
+    totalHTML.innerHTML = 0;    
 };
